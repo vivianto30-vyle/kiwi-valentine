@@ -12,11 +12,11 @@ const finalText = document.getElementById("final-text");
 // Click Envelope
 
 envelope.addEventListener("click", () => {
-    envelope.style. display = "none";
+    envelope.style.display = "none";
     letter.style.display = "flex";
 
     setTimeout( () => {
-        document.querySelector(".letter-wind").classList.add("open");
+        document.querySelector(".letter-window").classList.add("open");
     },50);
 });
 
@@ -33,7 +33,7 @@ noBtn.addEventListener("mouseover", () => {
     const moveY = Math.sin(angle) * distance;
 
     noBtn.style.transition = "transform 0.3s ease";
-    noBtn.style.transform = 'translate($({moveX}px, ${move}px)';
+    noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
 
 // Logic to make YES btn to grow
@@ -51,9 +51,9 @@ noBtn.addEventListener("mouseover", () => {
 //         yesBtn.style.position = "fixed";
 //         yesBtn.style.top = "50%";
 //         yesBtn.style.style.left = "50%";
-//         yesBtn.style.transform = 'translate(-50%, -50%) scale(${yesScale})';
+//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
 //     }else{
-//         yesBtn.style.transform = 'translate(-50%, -50%) scale(${yesScale})';
+//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
 //     }
 // });
 
@@ -64,7 +64,7 @@ yesBtn.addEventListener("click", () => {
 
     catImg.src = "cat_dance.gif";
 
-    document.querySelector(".letter-winddow").classList.add("final")
+    document.querySelector(".letter-window").classList.add("final");
 
     buttons.style.display = "none";
 
